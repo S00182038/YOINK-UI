@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only [navPush]="addDealPage">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      YOINK
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let deal of deals; let i = index" (click)="onOpenDeal(deal, i)">
+    <img [src]="deal.imageUrl">
+    <ion-card-content text-center>
+      <ion-card-title>
+        {{ deal.title }}
+      </ion-card-title>
+      <p>{{ deal.description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

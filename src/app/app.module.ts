@@ -8,10 +8,27 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePage } from 'src/pages/home/home';
+import { AddDealPage } from 'src/pages/add-deal/add-deal';
+import { DealPage } from 'src/pages/deal/deal';
+import { SetLocationPage } from 'pages/set-location/set-location';
+
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [
+    AppComponent,
+    HomePage,
+    AddDealPage,
+    DealPage,
+    SetLocationPage
+  ],
+  entryComponents: [
+    AppComponent,
+    HomePage,
+    AddDealPage,
+    DealPage,
+    SetLocationPage
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
@@ -20,4 +37,4 @@ import { AppComponent } from './app.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
